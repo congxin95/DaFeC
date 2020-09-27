@@ -3,14 +3,27 @@ Inductive Unsupervised Domain Adaptation for Few-Shot Classification via Cluster
 
 This code is for ECML-PKDD 2020 paper "Inductive Unsupervised Domain Adaptation for Few-Shot Classification via Clustering".
 
+In this paper, we introduce a model-agnostic framework, DaFeC, to improve domain adaptation performance for few-shot classification via clustering. We first build a representation extractor to derive features for unlabeled data from the target domain (no test data is necessary) and then group them with a cluster miner. The generated pseudo-labeled data and the labeled source-domain data are used as supervision to update the parameters of the few-shot classifier. In order to derive high-quality pseudo labels, we propose a Clustering Promotion Mechanism, to learn better features for the target domain via Similarity Entropy Minimization and Adversarial Distribution Alignment, which are combined with a Cosine Annealing Strategy. Experiments are performed on the FewRel 2.0 dataset. Our approach outperforms previous work with absolute gains (in classification accuracy) of 4.95%, 9.55%, 3.99% and 11.62%, respectively, under four few-shot settings.
+
+You can find the paper [here](https://arxiv.org/abs/2006.12816).
+
 Requirements
 ---
 
-python=3.7
+Python=3.7
 
-pytorch=1.1.0
+PyTorch=1.1.0
 
-transformers=2.7.0
+CUDA=9.0
+
+Transformers=2.7.0
+
+Preparation
+---
+
+The training and dev dataset have been included in the `./data` directory and the test set is not public. You should evaluate your models in the [offical website](https://thunlp.github.io/2/fewrel2_da.html).
+
+Due to the large size, the pre-trained Glove files and BERT pretrain checkpoint are not included. You can download them in [here](https://cloud.tsinghua.edu.cn/f/58f57bda00eb40be8d10/?dl=1).
 
 Usage
 ---
@@ -48,3 +61,7 @@ Citation
 }
 ```
 
+Related Repo
+---
+
+The dataset and baselines are adapted from [FewRel](https://github.com/thunlp/FewRel).
