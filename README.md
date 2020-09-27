@@ -7,7 +7,9 @@ Requirements
 ---
 
 python=3.7
+
 pytorch=1.1.0
+
 transformers=2.7.0
 
 Usage
