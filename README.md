@@ -47,7 +47,7 @@ python train_demo.py --model=pair --pair --encoder=bert --hidden_size=768 --opti
 ```
 
 4. Evaluation
-Please evaluate the performance of your model in the FewRel 2.0 official website [https://thunlp.github.io/2/fewrel2_da.html](https://thunlp.github.io/2/fewrel2_da.html).
+Please evaluate the performance of your model in the [FewRel 2.0 official website](https://thunlp.github.io/2/fewrel2_da.html).
 
 Citation
 ---
