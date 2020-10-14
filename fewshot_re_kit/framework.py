@@ -90,7 +90,8 @@ class FewShotREFramework:
         if adv:
             self.adv_cost = nn.CrossEntropyLoss()
             self.d = d
-            self.d.cuda()
+            if torch.cuda.is_available():
+                self.d.cuda()
 
         self.se = se
     
@@ -234,8 +235,12 @@ class FewShotREFramework:
                 features_adv = model.sentence_encoder(support_adv)
                 features = torch.cat([features_ori, features_adv], 0) 
                 total = features.size(0)
-                dis_labels = torch.cat([torch.zeros((total//2)).long().cuda(),
-                    torch.ones((total//2)).long().cuda()], 0)
+                if torch.cuda.is_available():
+                    dis_labels = torch.cat([torch.zeros((total//2)).long().cuda(),
+                        torch.ones((total//2)).long().cuda()], 0)
+                else:
+                    dis_labels = torch.cat([torch.zeros((total//2)).long(),
+                        torch.ones((total//2)).long()], 0)
 
                 entropy_coef = anneal(it, anneal_step, anneal_mode)
 
