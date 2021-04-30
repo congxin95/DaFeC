@@ -34,6 +34,6 @@ tokenizers==0.5.2
 torch==1.1.0
 tqdm==4.36.1
 transformers==2.5.1
-urllib3==1.25.6
+urllib3==1.25.8
 webencodings==0.5.1
 Werkzeug==0.16.0
