@@ -15,7 +15,7 @@ Markdown==3.1.1
 mkl-fft==1.0.14
 mkl-random==1.0.2
 mkl-service==2.3.0
-numpy==1.16.5
+numpy==1.22.0
 protobuf==3.10.0
 pycparser==2.19
 python-dateutil==2.8.0
