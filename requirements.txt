@@ -10,7 +10,7 @@ filelock==3.0.12
 grpcio==1.16.1
 idna==2.8
 jmespath==0.9.4
-joblib==0.13.2
+joblib==1.2.0
 Markdown==3.1.1
 mkl-fft==1.0.14
 mkl-random==1.0.2
